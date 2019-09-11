@@ -4,18 +4,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AppComponent} from './app.component';
 import {CarFormComponent} from './components/car/car-form/car-form.component';
-import {LoginFormComponent} from './components/user/login-form/login-form.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { HomeComponent } from './components/home/home.component';
+import {HomeComponent} from './components/home/home.component';
+import {LoginComponent} from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarFormComponent,
-    LoginFormComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,37 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="assets/img/car-outline-logo-29.png" width="67,25" height="30"
-         class="d-inline-block align-top" alt="">
-    Best Cars
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/home']" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a *ngIf="loginService.isUserLoggedIn()" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Car menu
-        </a>
-        <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/car-form']" class="nav-link">Add car</a>
-          <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/car-list']" class="nav-link">Show and edit cars</a>
-        </div>
-      <li class="nav-item"><a *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/login']" class="nav-link">Log
-        in</a>
-      </li>
-      <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/logout']" class="nav-link">Log out</a>
-      </li>
-
-
-    </ul>
-  </div>
-
-</nav>
+  <nav *ngIf="loginService.isUserLoggedIn()" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/car-outline-logo-29.png" width="67,25" height="30"
+           class="d-inline-block align-top" alt="">
+      Best Cars
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/home']" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a *ngIf="loginService.isUserLoggedIn()" class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Car menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/car-form']" class="nav-link">Add car</a>
+            <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/car-list']" class="nav-link">Show and edit
+              cars</a>
+          </div>
+        <li class="nav-item"><a *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/login']" class="nav-link">Log
+          in</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/logout']" class="nav-link">Log out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 

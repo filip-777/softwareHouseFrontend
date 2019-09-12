@@ -27,39 +27,43 @@
   <form class="form-horizontal" [formGroup]="basicForm">
     <div class="form-group">
       <label for="mark">Car mark</label>
-      <input type="text" class="form-control" id="mark" placeholder="Write mark of the car" formControlName="mark"
+      <input type="text" class="form-control border-primary" id="mark" placeholder="REQUIRED: Write mark of the car"
+             formControlName="mark"
              #mark>
     </div>
     <div class="form-group">
       <label for="model">Car model</label>
-      <input type="text" class="form-control" id="model" placeholder="Write model of the car" formControlName="model"
+      <input type="text" class="form-control border-primary" id="model" placeholder="REQUIRED: Write model of the car"
+             formControlName="model"
              #model>
     </div>
-    <div class="form-group">
+    <div>
       <label for="color">Car color</label>
-      <input type="text" class="form-control" id="color" placeholder="Write color of the car" formControlName="color"
+      <input type="text" class="form-control border-secondary" id="color" placeholder="Write color of the car"
              #color>
     </div>
-    <div class="form-group">
-    <label for="bodyType">Car body type</label>
-      <input type="text" class="form-control" id="bodyType" placeholder="Write body type of the car"
-             formControlName="bodyType"
+    <div>
+      <label for="bodyType">Car body type</label>
+      <input type="text" class="form-control border-secondary" id="bodyType" placeholder="Write body type of the car"
              #bodyType>
     </div>
     <div class="form-group">
-    <label for="yearOfProduction">Car year of production</label>
-      <input type="text" class="form-control" id="yearOfProduction" placeholder="Year of production"
+      <label for="yearOfProduction">Car year of production</label>
+      <input type="number" class="form-control border-primary" id="yearOfProduction"
+             placeholder="REQUIRED: Year of production"
              formControlName="yearOfProduction" #yearOfProduction>
     </div>
     <div class="form-group">
-    <label for="price">Car price</label>
-      <input type="text" class="form-control" id="price" name="price" placeholder="Car price" formControlName="price"
+      <label for="price">Car price in USD </label>
+      <input type="number" class="form-control border-primary" id="price" name="price" placeholder="REQUIRED: Car price in USD"
+             formControlName="price"
              #price>
     </div>
 
 
     <button type="submit" class="btn btn-success" [disabled]="!basicForm.valid"
             (click)="save(mark.value, model.value, color.value, bodyType.value, yearOfProduction. value, price.value)">
-      Submit</button>
+      Submit
+    </button>
   </form>
 </div>

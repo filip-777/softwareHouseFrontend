@@ -26,17 +26,15 @@ export class CarFormComponent implements OnInit {
     this.basicForm = this.fb.group({
       mark: [null, Validators.required],
       model: [null, Validators.required],
-      color: [this.noData],
-      bodyType: [this.noData],
       yearOfProduction: [null, Validators.required],
       price: [null, Validators.required]
     });
   }
 
-  save(mark, model, color, bodyTpe, yearOfProduction, price) {
-    this.car = new Car(model, mark, color, bodyTpe, price, yearOfProduction);
+  save(mark, model, color, bodyType, yearOfProduction, price) {
+    this.car = new Car(model, mark, color, bodyType, price, yearOfProduction);
     this.carService.save(this.car).then(response =>
-    this.router.navigate(['/car-list']));
+      this.router.navigate(['/car-list']));
 
   }
 

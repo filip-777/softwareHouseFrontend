@@ -4,13 +4,14 @@
 
       <h1 class="title">Welcome in Best Cars service!</h1>
 
-    </div>
-    <div class="navigation">
       <h3>Navigation links in service:</h3>
-      <ul>
-        <li><a [routerLink]="['/car-form']" class="nav-link">Add new car to Best Cars data base</a></li>
-        <li><a [routerLink]="['/car-list']" class="nav-link">Show and edit cars from data base</a></li>
-      </ul>
+
+    </div>
+    <div class="row justify-content-center">
+
+      <button type="button" class="btn btn-dark" [routerLink]="['/car-form']">Add new car to Best Cars data base</button>
+      <button type="button" class="btn btn-dark" [routerLink]="['/car-list']">Show and edit cars from data base</button>
+
     </div>
   </div>
 </section>

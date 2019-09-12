@@ -1,0 +1,25 @@
+<h2>Car list from database</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Mark</th>
+      <th>Model</th>
+      <th>Car body type</th>
+      <th>Color</th>
+      <th>Year of Production</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let car of cars">
+    <td>{{car.mark}}</td>
+    <td>{{car.model}}</td>
+    <td>{{car.bodyType}}</td>
+    <td>{{car.color}}</td>
+    <td>{{car.yearOfProduction}}</td>
+    <td>{{car.price}} USD </td>
+  </tr>
+  </tbody>
+
+</table>

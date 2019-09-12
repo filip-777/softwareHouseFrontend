@@ -1,0 +1,69 @@
+<!--<div class="container">-->
+<!--  <div [hidden]="submitted">-->
+<!--    <h1>Car form</h1>-->
+<!--    <form (ngSubmit)="onSubmit()" #carForm="ngForm">-->
+<!--      <div class="form-group">-->
+<!--        <label for="model">Car model</label>-->
+<!--        <input type="text" class="form-control" id="model" required [(ngModel)]="car.model"-->
+<!--               name="model" #name="ngModel">-->
+<!--        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">-->
+<!--          Model is required-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="form-group">-->
+<!--        <label for="mark">Car mark</label>-->
+<!--        <input type="text" class="form-control" id="mark" [(ngModel)]="car.mark" name="mark">-->
+<!--      </div>-->
+
+<!--      <button type="submit" class="btn btn-success" [disabled]="!carForm.form.valid" (click)="save(carForm)">Submit-->
+<!--      </button>-->
+
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="container">
+  <h1>Car form</h1>
+  <form class="form-horizontal" [formGroup]="basicForm">
+    <div class="form-group">
+      <label for="mark">Car mark</label>
+      <input type="text" class="form-control border-primary" id="mark" placeholder="REQUIRED: Write mark of the car"
+             formControlName="mark"
+             #mark>
+    </div>
+    <div class="form-group">
+      <label for="model">Car model</label>
+      <input type="text" class="form-control border-primary" id="model" placeholder="REQUIRED: Write model of the car"
+             formControlName="model"
+             #model>
+    </div>
+    <div>
+      <label for="color">Car color</label>
+      <input type="text" class="form-control border-secondary" id="color" placeholder="Write color of the car"
+             #color>
+    </div>
+    <div>
+      <label for="bodyType">Car body type</label>
+      <input type="text" class="form-control border-secondary" id="bodyType" placeholder="Write body type of the car"
+             #bodyType>
+    </div>
+    <div class="form-group">
+      <label for="yearOfProduction">Car year of production</label>
+      <input type="number" class="form-control border-primary" id="yearOfProduction"
+             placeholder="REQUIRED: Year of production"
+             formControlName="yearOfProduction" #yearOfProduction>
+    </div>
+    <div class="form-group">
+      <label for="price">Car price in USD </label>
+      <input type="number" class="form-control border-primary" id="price" name="price" placeholder="REQUIRED: Car price in USD"
+             formControlName="price"
+             #price>
+    </div>
+
+
+    <button type="submit" class="btn btn-success" [disabled]="!basicForm.valid"
+            (click)="save(mark.value, model.value, color.value, bodyType.value, yearOfProduction. value, price.value)">
+      Submit
+    </button>
+  </form>
+</div>

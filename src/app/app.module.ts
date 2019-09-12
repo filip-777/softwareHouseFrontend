@@ -9,6 +9,9 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {HomeComponent} from './components/home/home.component';
 import {LoginComponent} from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { CarListComponent } from './components/car/car-list/car-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import {LoginComponent} from './components/login/login.component';
     CarFormComponent,
     HomeComponent,
     LoginComponent,
+    NavbarComponent,
+    LogoutComponent,
+    CarListComponent,
   ],
   imports: [
     BrowserModule,

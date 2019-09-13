@@ -23,10 +23,12 @@ export class AuthenticationService {
 
   authenticate(username, password) {
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)});
-    return this.httpClient.get<LoginResponse>('http://localhost:9000/login',  {headers}).pipe(
+    return this.httpClient.get<LoginResponse>('http://localhost:9000/login', {headers}).pipe(
       map(
         userData => {
           sessionStorage.setItem('username', username);
+          const authString = 'Basic ' + btoa(username + ':' + password);
+          sessionStorage.setItem('basicAuth', authString);
           return userData;
         }
       )

@@ -22,6 +22,12 @@ export class CarListComponent implements OnInit {
     this.carService.fetchAll().then(response => this.cars = response);
   }
 
+  delete(car: Car): void{
+    this.carService.delete(car).then(response => {
+      this.cars = this.cars.filter(f => f !== car);
+    });
+  }
+
 }
 
 

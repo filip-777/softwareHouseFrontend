@@ -9,10 +9,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HomeComponent} from './components/home/home.component';
 import {LoginComponent} from './components/login/login.component';
-import {NavbarComponent} from './components/navbar/navbar.component';
-import {LogoutComponent} from './components/logout/logout.component';
-import {CarListComponent} from './components/car/car-list/car-list.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { CarListComponent } from './components/car/car-list/car-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 import {BasicAuthHttpInterceptorService} from './services/basicAuthHttpInterceptor/basic-auth-http-interceptor.service';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {BasicAuthHttpInterceptorService} from './services/basicAuthHttpIntercept
     NavbarComponent,
     LogoutComponent,
     CarListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

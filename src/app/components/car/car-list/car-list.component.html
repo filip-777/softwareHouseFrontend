@@ -7,8 +7,9 @@
       <th>Model</th>
       <th>Car body type</th>
       <th>Color</th>
-      <th>Year of Production</th>
+      <th>Production year</th>
       <th>Price</th>
+      <th>Remove car</th>
     </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
       <td>{{car.color}}</td>
       <td>{{car.yearOfProduction}}</td>
       <td>{{car.price}} USD</td>
+      <td><button class="btn btn-danger" (click)="delete(car)">Delete car</button></td>
     </tr>
     </tbody>
   </table>

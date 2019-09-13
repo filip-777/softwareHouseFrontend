@@ -1,25 +1,27 @@
 <h2>Car list from database</h2>
-
-<table class="table">
-  <thead>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
     <tr>
       <th>Mark</th>
       <th>Model</th>
       <th>Car body type</th>
       <th>Color</th>
-      <th>Year of Production</th>
+      <th>Production year</th>
       <th>Price</th>
+      <th>Remove car</th>
     </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let car of cars">
-    <td>{{car.mark}}</td>
-    <td>{{car.model}}</td>
-    <td>{{car.bodyType}}</td>
-    <td>{{car.color}}</td>
-    <td>{{car.yearOfProduction}}</td>
-    <td>{{car.price}} USD </td>
-  </tr>
-  </tbody>
-
-</table>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{car.mark}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.bodyType}}</td>
+      <td>{{car.color}}</td>
+      <td>{{car.yearOfProduction}}</td>
+      <td>{{car.price}} USD</td>
+      <td><button class="btn btn-danger" (click)="delete(car)">Delete car</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

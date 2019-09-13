@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {map} from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
 
 export class LoginResponse {
   constructor(
@@ -16,6 +17,8 @@ export class LoginResponse {
 })
 export class AuthenticationService {
 
+  private url = `${environment.api.url}/login`;
+
   constructor(
     private httpClient: HttpClient
   ) {
@@ -23,10 +26,12 @@ export class AuthenticationService {
 
   authenticate(username, password) {
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)});
-    return this.httpClient.get<LoginResponse>('http://localhost:9000/login',  {headers}).pipe(
+    return this.httpClient.get<LoginResponse>(this.url, {headers}).pipe(
       map(
         userData => {
           sessionStorage.setItem('username', username);
+          const authString = 'Basic ' + btoa(username + ':' + password);
+          sessionStorage.setItem('basicAuth', authString);
           return userData;
         }
       )
@@ -42,5 +47,6 @@ export class AuthenticationService {
 
   logOut() {
     sessionStorage.removeItem('username');
+    sessionStorage.removeItem('basicAuth');
   }
 }

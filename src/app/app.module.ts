@@ -12,6 +12,7 @@ import {LoginComponent} from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { CarListComponent } from './components/car/car-list/car-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CarListComponent } from './components/car/car-list/car-list.component';
     NavbarComponent,
     LogoutComponent,
     CarListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,27 +1,4 @@
-<!--<div class="container">-->
-<!--  <div [hidden]="submitted">-->
-<!--    <h1>Car form</h1>-->
-<!--    <form (ngSubmit)="onSubmit()" #carForm="ngForm">-->
-<!--      <div class="form-group">-->
-<!--        <label for="model">Car model</label>-->
-<!--        <input type="text" class="form-control" id="model" required [(ngModel)]="car.model"-->
-<!--               name="model" #name="ngModel">-->
-<!--        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">-->
-<!--          Model is required-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="form-group">-->
-<!--        <label for="mark">Car mark</label>-->
-<!--        <input type="text" class="form-control" id="mark" [(ngModel)]="car.mark" name="mark">-->
-<!--      </div>-->
-
-<!--      <button type="submit" class="btn btn-success" [disabled]="!carForm.form.valid" (click)="save(carForm)">Submit-->
-<!--      </button>-->
-
-<!--    </form>-->
-<!--  </div>-->
-<!--</div>-->
+<body>
 <div class="container">
   <h1>Car form</h1>
   <form class="form-horizontal" [formGroup]="basicForm">
@@ -55,7 +32,8 @@
     </div>
     <div class="form-group">
       <label for="price">Car price in USD </label>
-      <input type="number" class="form-control border-primary" id="price" name="price" placeholder="REQUIRED: Car price in USD"
+      <input type="number" class="form-control border-primary" id="price" name="price"
+             placeholder="REQUIRED: Car price in USD"
              formControlName="price"
              #price>
     </div>
@@ -67,3 +45,4 @@
     </button>
   </form>
 </div>
+</body>

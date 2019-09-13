@@ -32,7 +32,7 @@ export class CarFormComponent implements OnInit {
   }
 
   save(mark, model, color, bodyType, yearOfProduction, price) {
-    this.car = new Car(model, mark, color, bodyType, price, yearOfProduction);
+    this.car = new Car(model, mark, color, bodyType, price, Math.floor(yearOfProduction));
     this.carService.save(this.car).then(response =>
       this.router.navigate(['/car-list']));
 

@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-##Basic app info
+## Basic app info
 This application is frontend application for Software House recruitment task.
 
 This app is a basic car management platform. You can add, delete and show all cars stored in backend database.
